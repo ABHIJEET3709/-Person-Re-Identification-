@@ -45,3 +45,13 @@ The goal is to maintain a **consistent ID** for each person across both videos, 
 
 ## 🧩 Project Structure
 
+
+
+### 🧭 Tracking + Re-Identification
+- Tracks each person frame-by-frame using motion and IoU-based tracking.  
+- Assigns unique local IDs within the entry and exit videos.  
+- Extracts appearance features (e.g., color histograms, embeddings) per tracklet.  
+- Uses cosine similarity to measure appearance closeness between entry and exit individuals.  
+- Matches pairs using the Hungarian algorithm for global ID consistency.  
+- Ensures that each person keeps the same global ID across both videos.
+
